@@ -1,4 +1,4 @@
-<?php namespace App\SupportedApps\authentik;
+<?php namespace App\SupportedApps\XP900;
 
 class XP900 extends \App\SupportedApps implements \App\EnhancedApps {
 
