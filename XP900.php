@@ -13,23 +13,23 @@ class XP900 extends \App\SupportedApps implements \App\EnhancedApps {
 
     public function test()
     {
-        $test = parent::appTest($this->url());
+        $test = parent::appTest($this->url('status'));
         echo $test->status;
     }
 
     public function livestats()
     {
         $status = 'inactive';
-        $res = parent::execute($this->url());
+        $res = parent::execute($this->url('status'));
         $details = json_decode($res->getBody());
 
         $data = [];
         return parent::getLiveStats($status, $data);
         
     }
-    public function url()
+    public function url($endpoint)
     {
-        $api_url = parent::normaliseurl($this->config->url);
+        $api_url = parent::normaliseurl($this->config->url).$endpoint;
         return $api_url;
     }
 }
