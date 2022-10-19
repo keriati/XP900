@@ -1,0 +1,10 @@
+{
+    "appid": "epsonxp900privateapp",
+    "name": "XP900",
+    "website": "nope",
+    "license": "GNU General Public License v3.0 or later",
+    "description": "Epson XP 900 Printer",
+    "enhanced": true,
+    "tile_background": "Dark",
+    "icon": "epson.svg"
+}
