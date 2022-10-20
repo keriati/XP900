@@ -6,5 +6,6 @@
     "description": "Epson XP 900 Printer",
     "enhanced": true,
     "tile_background": "Dark",
-    "icon": "epson.svg"
+    "icon": "epson.png",
+    "sha": "ef80629574b8507e923d687f30687a83e4f1c9e1"
 }
