@@ -20,13 +20,25 @@ class XP900 extends \App\SupportedApps implements \App\EnhancedApps {
     public function livestats()
     {
         $status = 'inactive';
-        $res = parent::execute($this->url(''));
-        $details = json_decode($res->getBody());
+        $response = parent::execute($this->url(''));
+        $responseObject = json_decode($response->getBody());
 
         $data = [];
+
+        foreach($responseObject->data as $measurementsKey => $measurementsValue ) {
+            if ($measurementsValue->ink_level) {
+               foreach($measurementsValue->ink_level->metrics as $measurementKey => $measurementValue) {
+                     $color = $measurementValue->labels->color;
+                     $value = $measurementValue->value;
+                     $data[$color] = $value;
+               }
+            }
+        }
+
         return parent::getLiveStats($status, $data);
         
     }
+    
     public function url($endpoint)
     {
         return $this->config->url;
