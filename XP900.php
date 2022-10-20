@@ -30,7 +30,7 @@ class XP900 extends \App\SupportedApps implements \App\EnhancedApps {
                foreach($measurementsValue->ink_level->metrics as $measurementKey => $measurementValue) {
                      $color = $measurementValue->labels->color;
                      $value = $measurementValue->value;
-                     $data[$color] = $value;
+                     $data[$color] = $value * 2;
                }
             }
         }
