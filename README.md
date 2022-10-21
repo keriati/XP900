@@ -13,4 +13,4 @@ This Heimdall Enhanced App could display the ink level for an Epson XP-900 or an
 2) Fill in the printer and pushgateway addresses in ink-check.sh
 3) add ink-check.sh to a cron job
 4) Add this app as a Private Heimdall App
-5) Set up the pushgateway api url in heimdall
+5) Set up the pushgateway api url in heimdall (http://<pushgateway>/api/v1/metrics)
